@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+  <title>High-Tech Grocery Store</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f2f2;
+      overflow-x: hidden;
+    }
+    header {
+      background: #0e1f40;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #142c54;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      padding: 15px 20px;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background: #1e407c;
+    }
+    section {
+      display: none;
+      padding: 30px;
+      animation: fadeIn 1s ease;
+    }
+    section.active {
+      display: block;
+    }
+
+    .product, .gallery img {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .product img, .gallery img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .form-field {
+      margin-bottom: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .thank-you, .feedback {
+      text-align: center;
+      font-size: 24px;
+      padding-top: 50px;
+      animation: zoomIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.7); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    footer {
+      text-align: center;
+      background: #0e1f40;
+      color: white;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+
+<body>
+
+<header>
+  <h1>High-Tech Grocery Store 🛒</h1>
+</header>
+
+<nav>
+  <a href="#" onclick="showPage('home')">Home</a>
+  <a href="#" onclick="showPage('about')">About Us</a>
+  <a href="#" onclick="showPage('products')">Products</a>
+  <a href="#" onclick="showPage('contact')">Contact</a>
+  <a href="#" onclick="showPage('gallery')">Gallery</a>
+  <a href="#" onclick="showPage('feedback')">Feedback</a>
+  <a href="#" onclick="showPage('thankyou')">Thank You</a>
+</nav>
+
+<section id="home" class="active">
+    <h2>Welcome to High-Tech Grocery Store 🛒</h2>
+    <p>Experience a smarter way to shop — where technology meets freshness and convenience.</p>
+    <p>Browse fresh produce, daily essentials, and exclusive local products all in one place. Powered by innovation, driven by quality.</p>
+    <img src="frontstore.jpeg" alt="Our Store" style="width:100%; max-width:600px; margin-top:20px; border-radius:12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+  </section>
+  
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>Welcome to <strong>High-Tech Grocery Store</strong> – where innovation meets everyday shopping.</p>
+  
+    <p>Founded with a vision to transform the grocery experience, we combine cutting-edge technology with high-quality products to create a seamless, smart, and satisfying experience for every customer. Whether you're stocking up your kitchen or shopping for health-conscious choices, we've built a platform that makes your life easier.</p>
+  
+    <p>Why choose us?</p>
+    <ul>
+      <li>🛒 Easy-to-use online shopping experience</li>
+      <li>⚡ Fast and secure checkouts with multiple payment options</li>
+      <li>🚚 Reliable delivery with real-time order tracking</li>
+      <li>🌿 Fresh, organic, and local produce selection</li>
+      <li>🤖 AI-powered recommendations tailored to your needs</li>
+    </ul>
+  
+    <p>We believe the future of grocery shopping is smart, personalized, and convenient — and we're excited to bring that future to you.</p>
+  
+    <p>Thank you for choosing Our Store — where grocery shopping feels less like a chore and more like a delight.</p>
+  </section>
+  
+
+<section id="products">
+  <h2>Products</h2>
+  <div class="product"><img src="apple.jpeg"><p>Apples - $2.00</p></div>
+  <div class="product"><img src="milk.jpeg"><p>Milk - $1.50</p></div>
+  <div class="product"><img src="bread.jpeg"><p>Bread - $2.20</p></div>
+  <div class="product"><img src="banna.jpeg"><p>Banna - $4.00</p></div>
+  <div class="product"><img src="potato.jpeg"><p>Potato - $5.50</p></div>
+  <div class="product"><img src="orange.jpeg"><p>Oranges - $1.20</p></div>
+  <div class="product"><img src="cheese.jpeg"><p>Cheese - $1.20</p></div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="form-field">
+    <label>Name</label><br>
+    <input type="text" placeholder="Your Name">
+  </div>
+  <div class="form-field">
+    <label>Email</label><br>
+    <input type="email" placeholder="Your Email">
+  </div>
+  <div class="form-field">
+    <label>Message</label><br>
+    <textarea rows="4" placeholder="Your Message"></textarea>
+  </div>
+  <button onclick="alert('Message Sent!')">Send</button>
+</section>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="fruits.jpeg" alt="Fruits">
+    <img src="vegetables.jpeg" alt="Vegetables">
+    <img src="organic.jpeg" alt="Organic">
+  </div>
+</section>
+
+<section id="thankyou">
+    <div class="thank-you">
+      <h2>🎉 Thank You for Visiting!</h2>
+      <p>Your trust means the world to us. We’re here to make your grocery shopping effortless and enjoyable.</p>
+      <p>Have questions or suggestions? Don’t hesitate to <a href="#" onclick="showPage('contact')" style="color:#1e407c; text-decoration:underline;">contact us</a> anytime.</p>
+      <img src="thank-you.jpeg" alt="Thank You Basket" style="width:100%; max-width:500px; margin-top:30px; border-radius:12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </div>
+  </section>
+  
+
+<section id="feedback">
+    <div class="feedback">
+      <h2>💬 Feedback</h2>
+      <p>We'd love to hear what you think!</p>
+      <form id="feedbackForm">
+        <textarea name="message" rows="5" placeholder="Your feedback here..." required></textarea><br><br>
+        <input type="text" name="user_name" placeholder="Your name" required><br><br>
+       <br>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="feedback-status" style="margin-top: 15px; color: green;"></p>
+    </div>
+  </section>
+
+<footer>
+  <p>&copy; 2025 Shreeji High-Tech Grocery Store</p>
+</footer>
+
+<script>
+  function showPage(pageId) {
+    document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+    document.getElementById(pageId).classList.add("active");
+  }
+</script>
+<!-- EmailJS SDK -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script>
+  // ✅ Replace with your actual EmailJS public key
+  emailjs.init("jiHs6O-yUEDSAWwKb");  // Example: 'uBrFvLw4...'
+
+  document.getElementById("feedbackForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_9ewlkt7", "template_ws5zfrn", this)
+      .then(() => {
+        document.getElementById("feedback-status").innerText = "✅ Feedback sent successfully!";
+        this.reset();
+      }, (error) => {
+        document.getElementById("feedback-status").innerText = "❌ Failed to send. Try again.";
+        console.error("EmailJS Error:", error);
+      });
+  });
+</script>
+
+</body>
+
+</html>
